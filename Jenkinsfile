@@ -4,7 +4,7 @@ pipeline {
     environment {
         DOCKER_HUB_USER = "dharani03" // Change this
         IMAGE_NAME      = "student-reg-war"
-        REGION          = "us-east-1"
+        REGION          = "ap-south-1"
         CLUSTER_NAME    = "stud-reg-cluster"
     }
 
