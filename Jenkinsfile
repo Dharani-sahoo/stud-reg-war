@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        DOCKER_HUB_USER = "your-dockerhub-username" // Change this
+        DOCKER_HUB_USER = "dharani03" // Change this
         IMAGE_NAME      = "student-reg-war"
         REGION          = "us-east-1"
         CLUSTER_NAME    = "stud-reg-cluster"
@@ -19,7 +19,7 @@ pipeline {
         stage('Docker Image Construction') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'docker-hub-creds', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+                    withCredentials([usernamePassword(credentialsId: 'dckr_pat_-F9eJtbDwODdXSCA3h2E9EwnLq0', passwordVariable: 'Dharani@156', usernameVariable: 'dharani03')]) {
                         echo 'Building and Pushing Docker Image...'
                         sh "docker build -t ${DOCKER_HUB_USER}/${IMAGE_NAME}:${BUILD_NUMBER} ."
                         sh "docker tag ${DOCKER_HUB_USER}/${IMAGE_NAME}:${BUILD_NUMBER} ${DOCKER_HUB_USER}/${IMAGE_NAME}:latest"
