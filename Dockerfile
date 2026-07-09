@@ -11,7 +11,7 @@ RUN rm -rf /usr/local/tomcat/webapps/*
 # The Jenkins workspace will have the .war file after the 'mvn package' stage
 COPY target/*.war /usr/local/tomcat/webapps/student.war
 
-EXPOSE 8080
+EXPOSE 9090
 
 CMD ["catalina.sh", "run"]
 
