@@ -16,7 +16,9 @@ spec:
     spec:
       containers:
       - name: student-reg-container
-        image: image: dharani03/student-reg-war:latest
+        image: dharani03/student-reg-war:latest
+        imagePullPolicy: Always
+        
         ports:
         - containerPort: 8080
         resources:
